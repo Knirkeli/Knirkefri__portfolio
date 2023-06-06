@@ -1,0 +1,172 @@
+/* body {
+  margin: 0;
+  padding: 0;
+}
+.timeline {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 20px;
+  background: linear-gradient(
+    to bottom,
+    #333 0%,
+    #333 20%,
+    #8d8787 20%,
+    #fff 40%,
+    #333 40%,
+    #333 60%,
+    #8d8787 20%,
+    #fff 80%,
+    #333 80%
+  );
+}
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  width: 60%;
+  height: 60%;
+  text-align: center;
+}
+.content h2 {
+  margin-top: 0;
+}
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.8s ease-in-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.8s ease-in-out;
+}
+.transition-out {
+  opacity: 0;
+  transform: translateX(-100%);
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.section {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-left: 20vw;
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  max-width: 60%;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  text-wrap: wrap;
+  margin: auto auto;
+}
+
+.content p {
+  margin: 15px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+/*Timeline*/
+
+.timeline {
+  display: flex;
+  align-items: center;
+}
+
+.timeline {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20vw;
+  background-color: #333;
+  z-index: 999;
+}
+
+.timeline-buttons {
+  list-style: none;
+  margin-left: 15%;
+  margin-right: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  justify-content: space-between;
+  margin-top: 15%;
+  position: relative;
+}
+
+.timeline-buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #c6f5b4;
+}
+
+.timeline-buttons li {
+  position: relative;
+}
+
+.timeline-buttons button {
+  background-color: #333;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 0;
+}
+.timeline-buttons li:first-child {
+  margin-top: -10px;
+}
+
+.timeline-buttons li:last-child {
+  margin-bottom: -7px;
+}
+
+.timeline-buttons span {
+  position: absolute;
+  left: 30px;
+  top: -5px;
+}
+
+/*Snap*/
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+}
