@@ -5,27 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="js/line.js"></script>
+    <script defer src="js/Intersect.js"></script>
+    <script defer src="js/modal.js"></script>
     <link href="css/styles.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <div class="header__container">
-        <h1>My portfolio</h1>
-      </div>
+      <h1>Knirkefri Design</h1>
     </header>
-    <div class="notebook__container">
-      <div class="postit__note">
-        <!-- <p>In this postit i will add my designs</p> -->
-      </div>
 
-      <div class="postit__note">
-        <!-- <p>In this postit i will add my designs</p> -->
+    <div class="timeline"></div>
+
+    <div class="section">
+      <div class="content hidden">
+        <h2>Scroll allong my web dev journy</h2>
+        <div class="section__image--container">
+          <img src="img/bolle.JPG" alt="Eir eating a cinamon bun" />
+          <img
+            src="img/bål.JPG"
+            alt="Coocking a meal on a fire on the mountain"
+          />
+          <img
+            src="img/tur.JPG"
+            alt="Me and my kid on a hike. She sits on my back"
+          />
+        </div>
+        <div class="section__text--container">
+          <p>
+            Welcome to my portfolio. My name is Eirik Kirkeli and on this page i
+            will display my journy from beginner to proffesional web developer.
+            I am a student at Noroff Vocational College in Norway. I started my
+            jurney in 2022 as a beginner, and invite you to see my journy into
+            the fantastic world of web development.
+          </p>
+        </div>
       </div>
-      <div class="postit__note">
-        <!-- <p>In this postit i will add my designs</p> -->
-      </div>
-      <button href="newsite.html">switch page</button>
     </div>
+
+    <div class="section">
+      <div class="content hidden">
+        <h2>Trollmagi</h2>
+        <div class="section__image--container">
+          <img
+            src="img/Trollmagi-lander.png"
+            alt="The lander page of trollmagi"
+          />
+          <img src="img/Trollmagi-allposts.png" alt="Blog posts on trollmagi" />
+          <img src="img/Trollmagi-post.png" alt="A single post on trollmagi" />
+        </div>
+        <div class="section__text--container">
+          <p>
+            Trollmagi was my year one exam project. The task was to create a
+            blog by fetching from a WP API. I created a blog about the norwegian
+            folklore creature "Troll". I used HTML, CSS, JS and PHP to create
+            this blog. I also used the WP REST API to fetch the data from the WP
+            site. The theme was inspired by the stories i tel my kids befor bed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="content hidden">
+        <h2>Rainy Days</h2>
+        <div class="section__image--container">
+          <img src="img/Rainy-lander.png" alt="Lander page of Rainy days" />
+          <img
+            src="img/Rainy-search.png"
+            alt="Displaying the search function of Rainy days"
+          />
+          <img
+            src="img/Rainy_checkout.png"
+            alt="The checkout page of Rainy days"
+          />
+        </div>
+        <div class="section__text--container">
+          <p>
+            Rainy days was our cross course project. the first project we were
+            to use JS. The brief was to create a webshop for a fictional
+            company. We were to use the WooCommerce API to fetch the data. I
+            used HTML, CSS, JS and PHP to create this webshop.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="content hidden">
+        <h2>Community Science Museum</h2>
+        <div class="section__image--container">
+          <img src="img/Csm-lander.png" alt="The landing page of CSM" />
+          <img src="img/Csm-events.png" alt="The event page of CSM" />
+          <img src="img/Csm-book.png" alt="The booking page of CSM" />
+        </div>
+        <div class="section__text--container">
+          <p>
+            Our first real project in year one. The site is built with HTML and
+            CSS only. The task was to create a website for a fictional science
+            museum. Images and text was provided in the brief. I also contacted
+            a real science museum to get some inspiration and got permision to
+            use some of their content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span tabindex="0" class="close">&times;</span>
+      <img class="modal-content" id="img01" alt="modal hidden" />
+    </div>
+    <footer>
+      <p>Knirkefri Design &copy; 2021</p>
+    </footer>
   </body>
 </html>
