@@ -118,6 +118,7 @@ body {
 .content img {
   max-width: 20%;
   height: auto;
+  max-height: 350px;
   display: inline-block;
   margin: 0 5%;
 }

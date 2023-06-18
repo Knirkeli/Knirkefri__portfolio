@@ -2,7 +2,7 @@ var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var span = document.getElementsByClassName("close")[0];
 
-var images = document.querySelectorAll(".section img");
+var images = document.querySelectorAll(".section img:not(a > img)");
 
 images.forEach(function (img) {
   img.onclick = function () {
