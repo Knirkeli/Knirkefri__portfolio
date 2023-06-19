@@ -151,6 +151,12 @@ body {
   object-fit: cover;
 }
 
+@media (max-width: 550px) {
+  .content img {
+    max-height: 300px;
+  }
+}
+
 img:hover {
   cursor: pointer;
 }
@@ -158,6 +164,12 @@ img:hover {
 .content p {
   margin: 15px;
   font-family: sans-serif;
+}
+
+@media (max-width: 550px) {
+  .content p {
+    margin: 5px;
+  }
 }
 
 .content h2 {
