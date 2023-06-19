@@ -41,7 +41,7 @@ Open the project in your prefered code editor
 
 ## Contributing
 
-As this is my personal portfolio i would like suggestions to be made by contacting me in one of the chanels listed below.
+As this is my personal portfolio I would like suggestions to be made by contacting me in one of the chanels listed below.
 
 ## Contact Information
 - GitHub: https://github.com/Knirkeli
