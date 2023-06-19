@@ -47,4 +47,6 @@ As this is my personal portfolio i would like suggestions to be made by contacti
 
 - GitHub: https://github.com/Knirkeli
 - Email: knirkeli88@msn.com
+- https://www.facebook.com/Knirkeli
+- https://www.instagram.com/pappapaatur/
 - Website: https://knirkefridesign.com
