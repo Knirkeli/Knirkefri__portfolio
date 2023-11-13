@@ -309,6 +309,20 @@ img:hover {
   top: -5px;
 }
 
+@media (max-width: 550px) {
+  .timeline-buttons span {
+    display: none;
+    position: absolute;
+    z-index: 1000; /* Ensure the date is displayed over other content */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+  }
+
+  .timeline-buttons button:hover + span {
+    display: block;
+  }
+}
+
 .timeline button:hover {
   transform: scale(1.5);
   transition: 200ms;
