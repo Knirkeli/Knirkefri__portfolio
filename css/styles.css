@@ -131,36 +131,9 @@ body {
 @media (max-width: 700px) {
   .content {
     width: 100%;
-    height: 70%;
+    height: 90%;
   }
 }
-
-.content img {
-  max-width: 20%;
-  height: auto;
-  max-height: 350px;
-  display: inline-block;
-  margin: 0 5%;
-}
-
-.content img {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 1s, transform 1s;
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-@media (max-width: 550px) {
-  .content img {
-    max-height: 300px;
-  }
-}
-
-img:hover {
-  cursor: pointer;
-}
-
 .content p {
   margin: 15px;
   font-family: sans-serif;
@@ -180,6 +153,60 @@ img:hover {
 .section__text--container {
   width: 60%;
 }
+
+.content img {
+  max-width: 40%;
+  height: auto;
+  max-height: 350px;
+  display: inline-block;
+  grid-template-columns: minmax(100px, 1fr);
+}
+
+.content img {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.content.visible img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 450px) {
+  .content img {
+    max-height: 150px;
+    max-width: 40%;
+    object-fit: cover;
+    grid-template-columns: minmax(50px, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .content img {
+    max-height: 300px;
+    max-width: 250px;
+    grid-template-columns: minmax(100px, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .content img:nth-of-type(n + 3) {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .content img:nth-of-type(n + 2) {
+    display: none;
+  }
+}
+img:hover {
+  cursor: pointer;
+}
+
 
 /*animation of sections*/
 
@@ -202,16 +229,7 @@ img:hover {
   transition: all 1s ease-in-out;
 }
 
-.content.visible img {
-  opacity: 1;
-  transform: translateX(0);
-}
 
-@media (max-width: 650px) {
-  .content img:nth-of-type(n + 3) {
-    display: none;
-  }
-}
 
 @media (max-width: 850px) {
   .section__text--container {
@@ -260,7 +278,7 @@ img:hover {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 5px;
   background-color: #c6f5b4;
 }
 
@@ -271,8 +289,8 @@ img:hover {
 .timeline-buttons button {
   background-color: #333;
   border: none;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: 2px solid #fff;
   padding: 0;
