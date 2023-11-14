@@ -242,6 +242,7 @@ img:hover {
 .date {
   white-space: nowrap;
   position: absolute;
+  margin-top: 5px;
 }
 
 .timeline {
