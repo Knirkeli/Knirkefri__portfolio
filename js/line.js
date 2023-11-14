@@ -20,6 +20,7 @@ sections.forEach((section, index) => {
   button.setAttribute("data-section", index + 1);
 
   const dateElement = document.createElement("span");
+  dateElement.classList.add('date');
   dateElement.textContent = dates[index];
 
   const listItem = document.createElement("li");
@@ -46,4 +47,24 @@ timelineButtonElements.forEach((button) => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   });
+});
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const sectionNumber = entry.target.dataset.section;
+    const correspondingButton = document.querySelector(
+      `.timeline-buttons button[data-section="${sectionNumber}"]`
+    );
+
+    if (entry.isIntersecting) {
+      console.log(`Section ${sectionNumber} is in view`);
+      correspondingButton.classList.add('active_section');
+    } else {
+      console.log(`Section ${sectionNumber} is not in view`);
+      correspondingButton.classList.remove('active_section');
+    }
+  });
+}, { threshold: 0.5 });
+
+sections.forEach((section) => {
+  sectionObserver.observe(section);
 });

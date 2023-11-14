@@ -239,6 +239,11 @@ img:hover {
 
 /*Timeline*/
 
+.date {
+  white-space: nowrap;
+  position: absolute;
+}
+
 .timeline {
   display: flex;
   align-items: center;
@@ -313,13 +318,14 @@ img:hover {
   .timeline-buttons span {
     display: none;
     position: absolute;
-    z-index: 1000; /* Ensure the date is displayed over other content */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    z-index: 1000; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .timeline-buttons button:hover + span {
     display: block;
+    white-space: nowrap;
   }
 }
 
@@ -337,6 +343,11 @@ img:hover {
     display: none;
   }
 }
+@media (max-width: 680px) {
+  .timeline-buttons span {
+    white-space: wrap;
+  }
+}
 
 /*Snap*/
 
@@ -346,6 +357,11 @@ html {
 
 .section {
   scroll-snap-align: start;
+}
+
+.active_section {
+  transform: scale(1.5);
+  transition: 200ms;
 }
 
 /*modal*/
