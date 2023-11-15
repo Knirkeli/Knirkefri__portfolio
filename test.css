@@ -1,0 +1,149 @@
+/*animation of sections*/
+
+@media (preferes-reduced-motion) {
+    .hidden {
+      transition: none;
+    }
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  
+  .visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+  }
+  
+  
+  
+  @media (max-width: 850px) {
+    .section__text--container {
+      width: 80%;
+    }
+  }
+  
+  /*Timeline*/
+  
+  /* .date {
+    white-space: nowrap;
+  } */
+  
+  
+  .timeline {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+      to bottom,
+      rgb(169, 142, 91) 30%,
+      rgb(35, 34, 34) 70%
+    );
+  }
+  
+  .timeline {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20vw;
+    background-color: #333;
+    z-index: 999;
+  }
+  
+  .timeline-buttons {
+    list-style: none;
+    margin-left: 15%;
+    margin-right: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    justify-content: space-between;
+    margin-top: 15%;
+    position: relative;
+  }
+  
+  .timeline-buttons::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #c6f5b4;
+  }
+  
+  .timeline-buttons li {
+    position: relative;
+  }
+  
+  .timeline-buttons button {
+    background-color: #333;
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 0;
+  }
+  .timeline-buttons li:first-child {
+    margin-top: -10px;
+  }
+  
+  .timeline-buttons li:last-child {
+    margin-bottom: -7px;
+  }
+  
+  .timeline-buttons span {
+    position: absolute;
+    left: 30px;
+    top: -5px;
+  }
+  
+  @media (max-width: 550px) {
+    .timeline-buttons span {
+      display: none;
+      position: absolute;
+      z-index: 1000; 
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px);
+    }
+  
+  .date {
+    white-space: nowrap;
+    display: none; /* Hide the dates by default */
+  }
+  
+  .timeline-buttons button:hover + .date {
+    display: inline; /* Show the date when the button is hovered */
+  }
+  
+  @media (min-width: 700px) {
+    .date {
+      display: inline; /* Show the dates on screens wider than 700px */
+    }
+  }
+  
+    .timeline-buttons button:hover + span {
+      display: block;
+    }
+  }
+  
+  .timeline button:hover {
+    transform: scale(1.5);
+    transition: 200ms;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 550px) {
+    .timeline {
+      width: 10vw;
+    }
+    .timeline-buttons span {
+      display: none;
+    }
+  }

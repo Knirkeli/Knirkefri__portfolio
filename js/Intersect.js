@@ -8,7 +8,7 @@ const observer = new IntersectionObserver((entries) => {
 
       // add a transition-delay to each img element
       images.forEach((img, index) => {
-        img.style.transitionDelay = `${900 + index * 500}ms`;
+        img.style.transitionDelay = `${900 + index * 800}ms`;
       });
     } else {
       entry.target.classList.remove("visible");

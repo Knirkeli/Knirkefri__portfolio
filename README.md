@@ -31,21 +31,16 @@ git clone https://github.com/Knirkeli/Knirkefri__portfolio.git
 This is a webpage so no install necessary. 
 ```
 
-### Running
-
-To run the app, run the following commands:
-
-```bash
-Open the project in your prefered code editor
-```
-
 ## Contributing
 
-As this is my personal portfolio I would like suggestions to be made by contacting me in one of the chanels listed below.
+Anny contributions are welcome. Please clone the repo and make a pull request with posible changes for me to consider or contact me in one of the chanels below
 
 ## Contact Information
+- https://www.linkedin.com/in/eirik-kirkeli/
 - GitHub: https://github.com/Knirkeli
+- Website: https://knirkefridesign.netlify.app/
 - Email: knirkeli88@msn.com
 - Facebook: https://www.facebook.com/Knirkeli
 - Instagram: https://www.instagram.com/pappapaatur/
-- Website: https://knirkefridesign.netlify.app/
+
+
