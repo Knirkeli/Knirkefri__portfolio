@@ -162,10 +162,20 @@ body {
   grid-template-columns: minmax(100px, 1fr);
 }
 
+.content .github__img {
+  max-width: 40%;
+  height: auto;
+  max-height: 350px;
+  display: inline-block;
+  grid-template-columns: minmax(100px, 1fr);
+  aspect-ratio: auto;
+}
+
 .content img {
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 1s, transform 1s;
+  aspect-ratio: 1 / 2;
   border-radius: 15px;
   object-fit: cover;
 }
