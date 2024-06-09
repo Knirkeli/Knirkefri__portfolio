@@ -13,7 +13,7 @@ const currentDateString = `${currentDate
   .padStart(2, "0")}-${(currentDate.getMonth() + 1)
   .toString()
   .padStart(2, "0")}-${currentDate.getFullYear()}`;
-const dates = [currentDateString, "28-05-2023", "23-04-2023", "01-01-2023"];
+const dates = [currentDateString, "17-12-2023", "07-04-2024", "26-05-2024", "28-05-2023", "23-04-2023", "01-01-2023"];
 
 sections.forEach((section, index) => {
   const button = document.createElement("button");
