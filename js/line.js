@@ -13,14 +13,22 @@ const currentDateString = `${currentDate
   .padStart(2, "0")}-${(currentDate.getMonth() + 1)
   .toString()
   .padStart(2, "0")}-${currentDate.getFullYear()}`;
-const dates = [currentDateString, "17-12-2023", "07-04-2024", "26-05-2024", "28-05-2023", "23-04-2023", "01-01-2023"];
+const dates = [
+  currentDateString,
+  "17-06-2024",
+  "26-05-2024",
+  "07-04-2024",
+  "28-05-2023",
+  "23-04-2023",
+  "01-01-2023",
+];
 
 sections.forEach((section, index) => {
   const button = document.createElement("button");
   button.setAttribute("data-section", index + 1);
 
   const dateElement = document.createElement("span");
-  dateElement.classList.add('date');
+  dateElement.classList.add("date");
   dateElement.textContent = dates[index];
 
   const listItem = document.createElement("li");
@@ -48,22 +56,25 @@ timelineButtonElements.forEach((button) => {
     }
   });
 });
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const sectionNumber = entry.target.dataset.section;
-    const correspondingButton = document.querySelector(
-      `.timeline-buttons button[data-section="${sectionNumber}"]`
-    );
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const sectionNumber = entry.target.dataset.section;
+      const correspondingButton = document.querySelector(
+        `.timeline-buttons button[data-section="${sectionNumber}"]`
+      );
 
-    if (entry.isIntersecting) {
-      console.log(`Section ${sectionNumber} is in view`);
-      correspondingButton.classList.add('active_section');
-    } else {
-      console.log(`Section ${sectionNumber} is not in view`);
-      correspondingButton.classList.remove('active_section');
-    }
-  });
-}, { threshold: 0.5 });
+      if (entry.isIntersecting) {
+        console.log(`Section ${sectionNumber} is in view`);
+        correspondingButton.classList.add("active_section");
+      } else {
+        console.log(`Section ${sectionNumber} is not in view`);
+        correspondingButton.classList.remove("active_section");
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
 
 sections.forEach((section) => {
   sectionObserver.observe(section);
